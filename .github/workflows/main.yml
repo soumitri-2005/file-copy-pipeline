@@ -14,7 +14,7 @@ jobs:
         run: |
           echo "Starting copy..."
 
-          SOURCE="/home/soumitri.mishra@apmosys.mahape/Downloads/TC_01 (3).xlsx"
+          SOURCE="/home/soumitri.mishra@apmosys.mahape/Downloads/git-cheat-sheet-education.pdf"
           DESTINATION="/home/soumitri.mishra@apmosys.mahape/Documents"
 
           cp $SOURCE $DESTINATION
