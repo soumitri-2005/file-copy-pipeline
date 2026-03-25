@@ -1,0 +1,22 @@
+name: Copy Files Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  copy-files:
+    runs-on: self-hosted
+
+    steps:
+      - name: Copy files from source to destination
+        run: |
+          echo "Starting copy..."
+
+          SOURCE="/home/soumitri.mishra@apmosys.mahape/Downloads/git-cheat-sheet-education.pdf"
+          DESTINATION="/home/soumitri.mishra@apmosys.mahape/Documents"
+
+          cp $SOURCE $DESTINATION
+
+          echo "Copied"
