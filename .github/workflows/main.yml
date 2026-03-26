@@ -12,10 +12,17 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-#gitleakes
+        
+      # gitleaks
       - name: Gitleaks
         uses: gitleaks/gitleaks-action@v2
-        
+
+      # clamAV
+      - name: ClamAV
+        run: |
+          echo "Scanning"
+          clamscan /home/soumitri.mishra@apmosys.mahape/Downloads/git-cheat-sheet-education.pdf
+
       - name: Copy files from source to destination
         run: |
           echo "Starting copy..."
